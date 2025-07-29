@@ -7,13 +7,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --color-primary: #336666; /* Verde oscuro */
-            --color-secondary: #f0f2ed; /* Beige muy claro */
-            --color-accent: #e0ac4a; /* Dorado suave */
+            --color-primary: #572364; /* Tu Morado/Violeta deseado */
+            --color-secondary: #fbf8f5; /* Beige muy claro para fondo */
+            --color-accent: #e0ac4a; /* Dorado suave para acentos */
             --color-text: #4a4a4a; /* Gris oscuro para el texto */
             --color-light-text: #ffffff; /* Blanco para texto en fondos oscuros */
             --color-card-bg: #fdfdfd; /* Fondo de tarjeta casi blanco */
-            --color-border: #e0e0e0; /* Gris claro para bordes */
+            --color-border: #e8e8e8; /* Gris claro para bordes */
             --color-shadow: rgba(0, 0, 0, 0.08);
         }
 
@@ -96,7 +96,7 @@
             font-size: 1.05em;
         }
 
-        .projects-grid, .products-grid {
+        .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
@@ -110,6 +110,7 @@
             box-shadow: 0 4px 8px var(--color-shadow);
             display: flex;
             flex-direction: column;
+            padding-bottom: 1.5rem; /* Espacio al final de la tarjeta */
         }
 
         .project-card h3 {
@@ -121,24 +122,14 @@
         }
 
         .project-card p {
-            padding: 0 1.5rem 1.5rem;
+            padding: 0 1.5rem;
             color: var(--color-text);
             font-size: 1em;
             flex-grow: 1; /* Para que ocupen el espacio disponible */
-            text-align: left; /* Volvemos a la alineación normal para descripciones */
+            text-align: left;
         }
         
-        .project-card .no-link {
-            /* Estilos para parecer un botón sin ser un enlace */
-            display: block;
-            background-color: var(--color-accent);
-            color: var(--color-light-text);
-            padding: 1rem;
-            text-align: center;
-            font-weight: bold;
-            cursor: default; /* Cambia el cursor para indicar que no es clicable */
-            opacity: 0.9;
-        }
+        /* Eliminamos la clase .no-link ya que no se necesita más */
 
         footer {
             text-align: center;
@@ -167,7 +158,7 @@
             header p { font-size: 1.1em; }
             section h2 { font-size: 1.9em; padding-bottom: 0.5rem; }
             .skills ul { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
-            .projects-grid, .products-grid { grid-template-columns: 1fr; }
+            .projects-grid { grid-template-columns: 1fr; }
             section { padding: 1.8rem; margin-bottom: 1.8rem; }
         }
     </style>
@@ -204,34 +195,19 @@
                 <div class="project-card">
                     <h3>Aula ComUNIDAD</h3>
                     <p>Sistema web para registro de usuarios, gestión de cursos y generación de certificados, enfocado en comunidades con acceso limitado.</p>
-                    <div class="no-link">Ver Proyecto</div> </div>
+                    </div>
                 <div class="project-card">
                     <h3>Portafolio Profesional</h3>
                     <p>Página web creada con GitHub Pages para mostrar habilidades, productos y proyectos digitales a clientes internacionales.</p>
-                    <div class="no-link">Ver Demo</div> </div>
-            </div>
-        </section>
-
-        <section class="products">
-            <h2>Productos Digitales en Hotmart</h2>
-            <div class="products-grid">
-                <div class="project-card">
-                    <h3>📘 Kit Académico para Tesis</h3>
-                    <p>Planner digital, plantilla para resumen ejecutivo, cronograma editable y guía paso a paso para estudiantes universitarios.</p>
-                    <div class="no-link">Comprar en Hotmart</div> </div>
-                <div class="project-card">
-                    <h3>🎨 Pack de Plantillas para Redes</h3>
-                    <p>Diseños modernos para Canva que impulsan la imagen de marcas personales y negocios locales. Incluye tutorial de uso.</p>
-                    <div class="no-link">Ver el Pack</div> </div>
+                    </div>
             </div>
         </section>
 
         <section>
             <h2>Contacto</h2>
-            <p>¿Te interesa colaborar, adquirir mis productos o desarrollar un sistema contigo? ¡Escríbeme!</p>
+            <p>¿Te interesa colaborar o desarrollar un sistema contigo? ¡Escríbeme!</p>
             <p>
                 Email: <a href="mailto:elopezm160894@gmail.com">elopezm160894@gmail.com</a><br>
-                
                 GitHub: <a href="https://github.com/elenalopez.githug.io" target="_blank">github.com/elenalopez.githug.io</a>
             </p>
         </section>
@@ -240,7 +216,6 @@
     <footer>
         <p>&copy; 2025 Elena López. Todos los derechos reservados.</p>
         <p>
-             |
             <a href="https://instagram.com/@elopezm160894" target="_blank">Instagram</a> |
             <a href="https://wa.me/+584245723424" target="_blank">WhatsApp</a>
         </p>
