@@ -1,237 +1,249 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio de Elena López - Productos Digitales</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f7f6;
-      color: #333;
-      line-height: 1.6;
-    }
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Elena López - Productos Digitales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #336666; /* Verde oscuro */
+            --color-secondary: #f0f2ed; /* Beige muy claro */
+            --color-accent: #e0ac4a; /* Dorado suave */
+            --color-text: #4a4a4a; /* Gris oscuro para el texto */
+            --color-light-text: #ffffff; /* Blanco para texto en fondos oscuros */
+            --color-card-bg: #fdfdfd; /* Fondo de tarjeta casi blanco */
+            --color-border: #e0e0e0; /* Gris claro para bordes */
+            --color-shadow: rgba(0, 0, 0, 0.08);
+        }
 
-    header {
-      background-color: #2c3e50;
-      color: #ecf0f1;
-      padding: 2rem 1rem;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--color-secondary);
+            color: var(--color-text);
+            line-height: 1.6;
+        }
 
-    header h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 2.8em;
-      color: #3498db;
-      margin-bottom: 0.5rem;
-    }
+        header {
+            background-color: var(--color-primary);
+            color: var(--color-light-text);
+            padding: 2.5rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 8px var(--color-shadow);
+        }
 
-    header p {
-      font-size: 1.2em;
-      margin-top: 0;
-    }
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3em;
+            color: var(--color-accent);
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
 
-    main {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
-    }
+        header p {
+            font-size: 1.3em;
+            margin-top: 0.5rem;
+            opacity: 0.9;
+        }
 
-    section {
-      background-color: #fff;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
+        main {
+            max-width: 1000px;
+            margin: 2.5rem auto;
+            padding: 0 1.5rem;
+        }
 
-    section h2 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 2em;
-      color: #2c3e50;
-      border-bottom: 2px solid #3498db;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1.5rem;
-    }
+        section {
+            background-color: var(--color-card-bg);
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px var(--color-shadow);
+        }
 
-    .skills ul {
-      list-style: none;
-      padding: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 1rem;
-    }
+        section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2em;
+            color: var(--color-primary);
+            border-bottom: 3px solid var(--color-accent);
+            padding-bottom: 0.8rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
 
-    .skills li {
-      background-color: #ecf0f1;
-      padding: 0.8rem;
-      border-radius: 5px;
-      text-align: center;
-      font-weight: bold;
-      color: #2c3e50;
-      transition: background-color 0.3s ease;
-    }
+        section p {
+            font-size: 1.1em;
+            text-align: justify;
+        }
 
-    .skills li:hover {
-      background-color: #3498db;
-      color: #fff;
-    }
+        .skills ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.2rem;
+        }
 
-    .projects-grid, .products-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
+        .skills li {
+            background-color: var(--color-secondary);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            color: var(--color-primary);
+            border: 1px solid var(--color-border);
+            font-size: 1.05em;
+        }
 
-    .project-card {
-      background-color: #f9f9f9;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease;
-    }
+        .projects-grid, .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
 
-    .project-card:hover {
-      transform: translateY(-5px);
-    }
+        .project-card {
+            background-color: var(--color-card-bg);
+            border: 1px solid var(--color-border);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px var(--color-shadow);
+            display: flex;
+            flex-direction: column;
+        }
 
-    .project-card h3 {
-      color: #34495e;
-      padding: 1rem;
-      margin: 0;
-      font-size: 1.4em;
-    }
+        .project-card h3 {
+            color: var(--color-primary);
+            padding: 1.2rem 1.5rem 0.5rem;
+            margin: 0;
+            font-size: 1.6em;
+            font-family: 'Montserrat', sans-serif;
+        }
 
-    .project-card p {
-      padding: 0 1rem 1rem;
-      color: #666;
-      font-size: 0.95em;
-    }
+        .project-card p {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--color-text);
+            font-size: 1em;
+            flex-grow: 1; /* Para que ocupen el espacio disponible */
+            text-align: left; /* Volvemos a la alineación normal para descripciones */
+        }
+        
+        .project-card .no-link {
+            /* Estilos para parecer un botón sin ser un enlace */
+            display: block;
+            background-color: var(--color-accent);
+            color: var(--color-light-text);
+            padding: 1rem;
+            text-align: center;
+            font-weight: bold;
+            cursor: default; /* Cambia el cursor para indicar que no es clicable */
+            opacity: 0.9;
+        }
 
-    .project-card a {
-      display: block;
-      background-color: #3498db;
-      color: #fff;
-      padding: 0.8rem;
-      text-align: center;
-      text-decoration: none;
-      font-weight: bold;
-    }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--color-primary);
+            color: var(--color-light-text);
+            font-size: 1em;
+            margin-top: 3rem;
+        }
 
-    .project-card a:hover {
-      background-color: #2980b9;
-    }
+        footer a {
+            color: var(--color-accent);
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
 
-    footer {
-      text-align: center;
-      padding: 1.5rem;
-      background-color: #2c3e50;
-      color: #ecf0f1;
-      font-size: 0.9em;
-    }
+        footer a:hover {
+            color: var(--color-light-text);
+        }
 
-    footer a {
-      color: #ecdbff;
-      margin: 0 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    @media (max-width: 768px) {
-      header h1 { font-size: 2.2em; }
-      section h2 { font-size: 1.8em; }
-      .skills ul { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
-      .projects-grid, .products-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5em; }
+            header p { font-size: 1.1em; }
+            section h2 { font-size: 1.9em; padding-bottom: 0.5rem; }
+            .skills ul { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+            .projects-grid, .products-grid { grid-template-columns: 1fr; }
+            section { padding: 1.8rem; margin-bottom: 1.8rem; }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>¡Hola! Soy Elena López</h1>
-    <p>Desarrolladora de Software | Creadora de Productos Digitales | Visionaria Social</p>
-  </header>
+    <header>
+        <h1>¡Hola! Soy Elena López</h1>
+        <p>Desarrolladora de Software | Creadora de Productos Digitales | Visionaria Social</p>
+    </header>
 
-  <main>
-    <section>
-      <h2>Sobre mí</h2>
-      <p>Soy una apasionada de la informática, experta en crear soluciones web funcionales y recursos digitales que empoderan a estudiantes y emprendedores. En este espacio reúno mis habilidades técnicas y visión de impacto para ofrecer productos prácticos y personalizados.</p>
-    </section>
+    <main>
+        <section>
+            <h2>Sobre mí</h2>
+            <p>Soy una apasionada de la informática, experta en crear soluciones web funcionales y recursos digitales que empoderan a estudiantes y emprendedores. En este espacio reúno mis habilidades técnicas y visión de impacto para ofrecer productos prácticos y personalizados.</p>
+        </section>
 
-    <section class="skills">
-      <h2>Mis Habilidades Técnicas</h2>
-      <ul>
-        <li>HTML & CSS</li>
-        <li>JavaScript</li>
-        <li>Git & GitHub</li>
-        <li>XAMPP / Codespaces</li>
-        <li>Diseño con Canva Pro</li>
-        <li>SQL / NoSQL</li>
-        <li>Desarrollo de Sistemas</li>
-        <li>Documentación Técnica</li>
-      </ul>
-    </section>
+        <section class="skills">
+            <h2>Mis Habilidades Técnicas</h2>
+            <ul>
+                <li>HTML & CSS</li>
+                <li>JavaScript</li>
+                <li>Git & GitHub</li>
+                <li>XAMPP / Codespaces</li>
+                <li>Diseño con Canva Pro</li>
+                <li>SQL / NoSQL</li>
+                <li>Desarrollo de Sistemas</li>
+                <li>Documentación Técnica</li>
+            </ul>
+        </section>
 
-    <section class="projects">
-      <h2>Proyectos Destacados</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3>Aula ComUNIDAD</h3>
-          <p>Sistema web para registro de usuarios, gestión de cursos y generación de certificados, enfocado en comunidades con acceso limitado.</p>
-          <a href="https://github.com/tuusuario/AulaComUNIDAD" target="_blank">Ver Proyecto</a>
-        </div>
-        <div class="project-card">
-          <h3>Portafolio Profesional</h3>
-          <p>Página web creada con GitHub Pages para mostrar habilidades, productos y proyectos digitales a clientes internacionales.</p>
-          <a href="https://tuusuario.github.io/" target="_blank">Ver Demo</a>
-        </div>
-      </div>
-    </section>
+        <section class="projects">
+            <h2>Proyectos Destacados</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Aula ComUNIDAD</h3>
+                    <p>Sistema web para registro de usuarios, gestión de cursos y generación de certificados, enfocado en comunidades con acceso limitado.</p>
+                    <div class="no-link">Ver Proyecto</div> </div>
+                <div class="project-card">
+                    <h3>Portafolio Profesional</h3>
+                    <p>Página web creada con GitHub Pages para mostrar habilidades, productos y proyectos digitales a clientes internacionales.</p>
+                    <div class="no-link">Ver Demo</div> </div>
+            </div>
+        </section>
 
-    <section class="products">
-      <h2>Productos Digitales en Hotmart</h2>
-      <div class="products-grid">
-        <div class="project-card">
-          <h3>📘 Kit Académico para Tesis</h3>
-          <p>Planner digital, plantilla para resumen ejecutivo, cronograma editable y guía paso a paso para estudiantes universitarios.</p>
-          <a href="https://hotmart.com/tu-producto-kit-tesis" target="_blank">Comprar en Hotmart</a>
-        </div>
-        <div class="project-card">
-          <h3>🎨 Pack de Plantillas para Redes</h3>
-          <p>Diseños modernos para Canva que impulsan la imagen de marcas personales y negocios locales. Incluye tutorial de uso.</p>
-          <a href="https://hotmart.com/tu-pack-plantillas" target="_blank">Ver el Pack</a>
-        </div>
-      </div>
-    </section>
+        <section class="products">
+            <h2>Productos Digitales en Hotmart</h2>
+            <div class="products-grid">
+                <div class="project-card">
+                    <h3>📘 Kit Académico para Tesis</h3>
+                    <p>Planner digital, plantilla para resumen ejecutivo, cronograma editable y guía paso a paso para estudiantes universitarios.</p>
+                    <div class="no-link">Comprar en Hotmart</div> </div>
+                <div class="project-card">
+                    <h3>🎨 Pack de Plantillas para Redes</h3>
+                    <p>Diseños modernos para Canva que impulsan la imagen de marcas personales y negocios locales. Incluye tutorial de uso.</p>
+                    <div class="no-link">Ver el Pack</div> </div>
+            </div>
+        </section>
 
-    <section>
-      <h2>Contacto</h2>
-      <p>¿Te interesa colaborar, adquirir mis productos o desarrollar un sistema contigo? ¡Escríbeme!</p>
-      <p>
-        Email: <a href="elopezm160894@gmail.com">elopezm160894@gmail.com</a><br>
-        LinkedIn: <a href="https://linkedin.com/in/tuusuario" target="_blank">linkedin.com/in/tuusuario</a><br>
-        GitHub: <a href="https://github.com/elenalopez.githug.io" target="_blank"><github class="com">
-       
-      </p>
-    </section>
-  </main>
+        <section>
+            <h2>Contacto</h2>
+            <p>¿Te interesa colaborar, adquirir mis productos o desarrollar un sistema contigo? ¡Escríbeme!</p>
+            <p>
+                Email: <a href="mailto:elopezm160894@gmail.com">elopezm160894@gmail.com</a><br>
+                
+                GitHub: <a href="https://github.com/elenalopez.githug.io" target="_blank">github.com/elenalopez.githug.io</a>
+            </p>
+        </section>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 Elena López. Todos los derechos reservados.</p>
-    <p>
-      <a href="https://hotmart.com/tu-producto" target="_blank">Hotmart</a> |
-      <a href="https://instagram.com/@elopezm160894" target="_blank">Instagram</a> |
-      <a href="https://wa.me/584XXXXXXXX" target="_blank">WhatsApp</a>
-    </p>
-  </footer>
+    <footer>
+        <p>&copy; 2025 Elena López. Todos los derechos reservados.</p>
+        <p>
+             |
+            <a href="https://instagram.com/@elopezm160894" target="_blank">Instagram</a> |
+            <a href="https://wa.me/+584245723424" target="_blank">WhatsApp</a>
+        </p>
+    </footer>
 </body>
 </html>
-
-
-
-
