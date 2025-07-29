@@ -40,6 +40,16 @@
             color: var(--color-accent);
             margin-bottom: 0.5rem;
             letter-spacing: 1px;
+            /* Flexbox para centrar el icono y el texto */
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 15px; /* Espacio entre el icono y el texto */
+        }
+
+        header h1 .icon-computer {
+            font-size: 0.8em; /* Tamaño del icono relativo al h1 */
+            line-height: 1; /* Asegura que el icono no afecte el espaciado de línea */
         }
 
         header p {
@@ -129,8 +139,6 @@
             text-align: left;
         }
         
-        /* Eliminamos la clase .no-link ya que no se necesita más */
-
         footer {
             text-align: center;
             padding: 2rem;
@@ -154,7 +162,12 @@
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
-            header h1 { font-size: 2.5em; }
+            header h1 { 
+                font-size: 2.5em; 
+                flex-direction: column; /* Stack icon and text vertically */
+                gap: 5px; /* Reduce gap for smaller screens */
+            }
+            header h1 .icon-computer { font-size: 0.7em; }
             header p { font-size: 1.1em; }
             section h2 { font-size: 1.9em; padding-bottom: 0.5rem; }
             .skills ul { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
@@ -165,14 +178,15 @@
 </head>
 <body>
     <header>
-        <h1>¡Hola! Soy Elena López</h1>
+        <h1><span class="icon-computer">💻</span> ¡Hola! Soy Elena López</h1>
         <p>Desarrolladora de Software | Creadora de Productos Digitales | Visionaria Social</p>
     </header>
 
     <main>
         <section>
             <h2>Sobre mí</h2>
-            <p>Soy una apasionada de la informática, experta en crear soluciones web funcionales y recursos digitales que empoderan a estudiantes y emprendedores. En este espacio reúno mis habilidades técnicas y visión de impacto para ofrecer productos prácticos y personalizados.</p>
+            <p>Soy una apasionada de la informática, experta en crear soluciones web funcionales y recursos digitales que empoderan a estudiantes y emprendedores. Tengo la capacidad de desarrollar **sistemas a medida** para diversas necesidades, como sistemas de bibliotecas, gestión de inventarios, administración de farmacias, y cualquier sistema que requieras tener a tu mano.</p>
+            <p>En este espacio reúno mis habilidades técnicas y visión de impacto para ofrecer productos prácticos y personalizados.</p>
         </section>
 
         <section class="skills">
@@ -191,15 +205,16 @@
 
         <section class="projects">
             <h2>Proyectos Destacados</h2>
+            <p>Aquí te presento algunos ejemplos de mis trabajos y mi capacidad para crear **sistemas eficientes y adaptados a tus necesidades específicas**:</p>
             <div class="projects-grid">
                 <div class="project-card">
                     <h3>Aula ComUNIDAD</h3>
                     <p>Sistema web para registro de usuarios, gestión de cursos y generación de certificados, enfocado en comunidades con acceso limitado.</p>
-                    </div>
+                </div>
                 <div class="project-card">
                     <h3>Portafolio Profesional</h3>
                     <p>Página web creada con GitHub Pages para mostrar habilidades, productos y proyectos digitales a clientes internacionales.</p>
-                    </div>
+                </div>
             </div>
         </section>
 
